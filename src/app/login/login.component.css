@@ -1,0 +1,213 @@
+/* Layout chính: Căn giữa dọc và ngang */
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Căn giữa màn hình */
+  min-height: 100vh;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: var(--bg-body);
+}
+
+.login-content {
+  width: 100%;
+  max-width: 308px; /* Độ rộng chuẩn của GitHub form mới */
+  margin: 0 auto;
+}
+
+/* 1. Header Logo & Title */
+.header-logo {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.auth-heading {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.auth-heading h1 {
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+/* 2. Main Auth Body (Form + Buttons) */
+/* Lưu ý: GitHub Dark Mode đôi khi bỏ border bao quanh toàn bộ,
+   chỉ để các input nổi bật. Nhưng theo ảnh bạn gửi, nền rất tối. */
+.auth-form-body {
+  padding: 16px;
+  font-size: 14px;
+  /* Nếu muốn khung viền bao quanh (kiểu cũ) thì uncomment dòng dưới */
+  /* background-color: var(--bg-card); */
+  /* border: 1px solid var(--border-color); */
+  /* border-radius: 6px; */
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+/* Inputs */
+.form-control {
+  width: 100%;
+  padding: 5px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text-primary);
+  background-color: var(--bg-body); /* Nền input tối */
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  outline: none;
+  margin-bottom: 16px;
+  transition: 80ms cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.form-control:focus {
+  border-color: var(--link-color);
+  box-shadow: 0 0 0 3px rgba(31, 111, 235, 0.3); /* Blue Glow */
+}
+
+/* Password Header Layout */
+.label-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.forgot-link {
+  font-size: 12px;
+  color: var(--link-color);
+}
+
+/* Primary Button (Green) */
+.btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 5px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid rgba(240, 246, 252, 0.1);
+  margin-bottom: 16px;
+}
+
+.btn-primary {
+  color: var(--btn-primary-text);
+  background-color: var(--btn-primary-bg);
+}
+
+.btn-primary:hover {
+  background-color: var(--btn-primary-hover);
+}
+
+.btn-primary:disabled {
+  background-color: #238636;
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* Divider "or" */
+.login-divider {
+  text-align: center;
+  position: relative;
+  margin: 16px 0;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.login-divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-subtle);
+  z-index: 1;
+}
+
+.login-divider span {
+  position: relative;
+  z-index: 2;
+  background-color: var(--bg-body); /* Che đường kẻ */
+  padding: 0 8px;
+}
+
+/* Social Buttons */
+.btn-social {
+  background-color: var(--btn-social-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px; /* Khoảng cách giữa các nút */
+  height: 38px;
+}
+
+.btn-social:hover {
+  background-color: var(--btn-social-hover);
+  border-color: #8b949e;
+  text-decoration: none;
+}
+
+.social-icon {
+  vertical-align: text-bottom;
+}
+
+/* Footer Links in Box */
+.create-account-callout {
+  margin-top: 16px;
+  padding: 16px;
+  text-align: center;
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.passkey-link {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+/* 3. Footer Bottom */
+.login-footer {
+  margin-top: 80px; /* Đẩy xuống dưới */
+  width: 100%;
+  padding: 24px 16px;
+  border-top: none;
+  text-align: center;
+  font-size: 12px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px; /* Khoảng cách giữa các link */
+}
+
+.footer-links li a {
+  color: var(--text-secondary);
+}
+
+.footer-links li a:hover {
+  text-decoration: underline;
+  color: var(--link-color);
+}
