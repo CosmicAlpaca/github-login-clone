@@ -35,16 +35,11 @@
   color: var(--text-primary);
 }
 
-/* 2. Main Auth Body (Form + Buttons) */
-/* Lưu ý: GitHub Dark Mode đôi khi bỏ border bao quanh toàn bộ,
-   chỉ để các input nổi bật. Nhưng theo ảnh bạn gửi, nền rất tối. */
+
 .auth-form-body {
   padding: 16px;
   font-size: 14px;
-  /* Nếu muốn khung viền bao quanh (kiểu cũ) thì uncomment dòng dưới */
-  /* background-color: var(--bg-card); */
-  /* border: 1px solid var(--border-color); */
-  /* border-radius: 6px; */
+
 }
 
 /* Labels */
