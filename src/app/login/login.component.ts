@@ -27,7 +27,7 @@ export class LoginComponent {
 
       // Mô phỏng độ trễ của API
       setTimeout(() => {
-        console.group('🔐 Authentication Attempt');
+        console.group(' Authentication Attempt');
         console.log('Timestamp:', new Date().toISOString());
         console.log('Payload:', this.loginForm.value);
         console.log('Status: Valid input, sending to backend (mock)...');
@@ -38,13 +38,13 @@ export class LoginComponent {
       }, 1000);
     } else {
       this.loginForm.markAllAsTouched(); // Hiển thị lỗi nếu người dùng cố ấn submit
-      console.warn('⚠️ Form không hợp lệ, vui lòng kiểm tra lại.');
+      console.warn(' Form không hợp lệ, vui lòng kiểm tra lại.');
     }
   }
 
   // 2. Xử lý Social Login (Google / Apple)
   onSocialLogin(provider: 'Google' | 'Apple'): void {
-    console.group(`🌐 ${provider} Login`);
+    console.group(` ${provider} Login`);
     console.log(`Action: Initiating OAuth2 flow with ${provider}`);
     console.log('Redirect URI: https://github.com/login/oauth/callback');
     console.groupEnd();
@@ -56,7 +56,7 @@ export class LoginComponent {
   onNavigate(destination: string, event: Event): void {
     event.preventDefault(); // Ngăn chặn reload trang mặc định của thẻ <a>
 
-    console.group('🔗 Navigation Event');
+    console.group(' Navigation Event');
     console.log('Target Destination:', destination);
     console.log('Action: Routing to page...');
     console.groupEnd();
