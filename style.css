@@ -91,6 +91,8 @@ h1 {
   color: #ffffff;
 }
 
+h1 {}
+
 .login-box {
   width: 100%;
   background-color: var(--box-bg);
@@ -148,9 +150,43 @@ h1 {
   color: #ffffff;
 }
 
-.btn-primary:hover {
-  background-color: var(--btn-primary-hover);
+.btn:hover {
+    background: linear-gradient(90deg, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee, #ff0000);
+    background-size: 400%;
+    border-color: transparent;
+    color: #fff;
+    text-shadow: 2px 2px 0 #000;
+    animation: rainbow-slide 0.6s linear infinite, wonky-shake 0.9s ease-in-out infinite alternate;
+    z-index: 10;
 }
+
+@keyframes rainbow-slide {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes wonky-shake {
+    0% {
+        transform: scale(1) rotate(0deg) skew(0deg);
+    }
+    25% {
+        transform: scale(1.1) rotate(-5deg) skew(-10deg);
+    }
+    50% {
+        transform: scale(0.9) rotate(3deg) skew(5deg);
+    }
+    75% {
+        transform: scale(1.05) rotate(-3deg) skew(5deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg) skew(0deg);
+    }
+}
+
 
 .social-login-box {
   width: 100%;
@@ -211,4 +247,26 @@ a:hover {
 
 .footer a:hover {
   color: var(--link-color);
+}
+/*  hover */
+.btn:hover::before {
+    /* 👉 ➡ 👆 */
+    content: '👉 ';
+
+    display: inline-block; 
+
+    animation: emoji-wiggle 0.3s ease-in-out infinite;
+}
+
+/* animation  */
+@keyframes emoji-wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-25deg) scale(1.2);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
