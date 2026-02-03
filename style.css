@@ -156,7 +156,7 @@ h1 {}
     border-color: transparent;
     color: #fff;
     text-shadow: 2px 2px 0 #000;
-    animation: rainbow-slide 0.6s linear infinite, wonky-shake 0.9s ease-in-out infinite alternate;
+    animation: rainbow-slide 0.6s linear infinite, wonky-shake 1.5s ease-in-out infinite alternate;
     z-index: 10;
 }
 
