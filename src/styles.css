@@ -3,11 +3,12 @@
   /* GitHub Dark Mode Variables */
   --bg-body: #0d1117;
   --bg-card: #161b22;
-  --border-color: #30363d; /* Viền tối */
+  --bg-header: #010409;
+  --border-color: #30363d;
   --border-subtle: #21262d;
-  --text-primary: #c9d1d9; /* Trắng xám */
-  --text-secondary: #8b949e; /* Xám nhạt */
-  --link-color: #58a6ff; /* Xanh dương sáng */
+  --text-primary: #c9d1d9;
+  --text-secondary: #8b949e;
+  --link-color: #58a6ff;
   --btn-primary-bg: #238636;
   --btn-primary-hover: #2ea043;
   --btn-primary-text: #ffffff;
@@ -36,8 +37,15 @@ body {
 a {
   text-decoration: none;
   color: var(--link-color);
+  cursor: pointer;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
